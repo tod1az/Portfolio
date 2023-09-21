@@ -1,11 +1,12 @@
 import foto from '../assets/foto.png'
+import About from './About'
 import Links from './Links'
 
 const Hero: React.FC = () => {
   return (
     <main
-      id='#home'
-      className='md:mt-[8rem] mt-14 flex flex-col items-center justify-center'>
+      id='home'
+      className='scroll-m-[8rem] scroll-smooth md:mt-[8rem] mt-14 flex flex-col items-center justify-center transition-all'>
       <div className='xl:flex xl:flex-row-reverse  flex flex-col items-center gap-5 xl:gap-36'>
         <img className='rounded-full  w-[10rem] md:w-[20rem]' src={foto} />
         <p className='flex flex-col'>
@@ -17,6 +18,7 @@ const Hero: React.FC = () => {
           </h1>
         </p>
       </div>
+      <About />
       <Links />
     </main>
   )
