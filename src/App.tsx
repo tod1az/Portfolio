@@ -1,9 +1,9 @@
-import Projects from './Components/Projects'
-import Skills from './Components/Skills'
-import Contact from './Components/Contact'
+import Projects from './components/Projects'
+import Skills from './components/Skills'
+import Contact from './components/Contact'
 
-import Intro from './Components/Intro'
-import Experience from './Components/Experience'
+import Intro from './components/Intro'
+import Experience from './components/Experience'
 
 const App: React.FC = () => {
   return (
