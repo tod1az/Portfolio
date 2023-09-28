@@ -4,9 +4,9 @@ import App from './App.tsx'
 import './index.css'
 import Header from './components/Header.tsx'
 import ActiveSectionContextProvider from './Context/ActiveSection.tsx'
+import ThemeButton from './components/Theme.tsx'
 import { LanguageProvider } from './Context/Language.tsx'
 import { ThemeProvider } from './Context/Theme.tsx'
-import ThemeButton from './components/Theme.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
