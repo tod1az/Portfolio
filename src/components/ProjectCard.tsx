@@ -1,11 +1,27 @@
-import { type Project } from '../lib/types'
+import type { ProjectProps } from '../lib/types'
+import { useScroll, motion, useTransform } from 'framer-motion'
+import { useRef } from 'react'
+import { useLanguage } from '../lib/hooks'
+import { languages } from '../lib/consts'
 
-export type ProjectCardProps = Project
+const ProjectCard: React.FC<ProjectProps> = ({ title, description, descriptionEs, tags, imageUrl, repoUrl }) => {
+  const ref = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['0 1', '1.33 1']
+  })
+  const { language } = useLanguage()
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1])
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1])
 
-const ProjectCard: React.FC<Project> = ({ title, descriptionEs, tags, imageUrl, repo }) => {
   return (
-    <div
+    <motion.div
       className='group mb-3 sm:mb-8'
+      ref={ref}
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress
+      }}
     >
 
       <section
@@ -17,7 +33,10 @@ const ProjectCard: React.FC<Project> = ({ title, descriptionEs, tags, imageUrl, 
             {title}
           </h3>
           <p className='mt-2 leading-relaxed text-gray-700 dark:text-white/70'>
-            {descriptionEs}
+            {language === languages.en
+              ? description
+              : descriptionEs
+            }
           </p>
           <ul
             className='flex flex-wrap mt-4 gap-2 sm:mt-auto'
@@ -34,7 +53,7 @@ const ProjectCard: React.FC<Project> = ({ title, descriptionEs, tags, imageUrl, 
             }
           </ul>
         </div>
-        <a href={repo} target='_blank' rel="noreferrer">
+        <a href={repoUrl} target='_blank' rel="noreferrer">
           <img
             src={imageUrl}
             alt='Project Image'
@@ -42,7 +61,7 @@ const ProjectCard: React.FC<Project> = ({ title, descriptionEs, tags, imageUrl, 
           />
         </a>
       </section>
-    </div>
+    </motion.div>
   )
 }
 
