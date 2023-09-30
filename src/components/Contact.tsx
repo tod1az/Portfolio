@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
   })
   const [isloading, setIsLoading] = useState(false)
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setIsLoading(prev => true)
     const sendend = await sendEmail(formData)
