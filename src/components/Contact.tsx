@@ -19,10 +19,7 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    setIsLoading(prev => {
-      console.log(prev)
-      return true
-    })
+    setIsLoading(_prev => true)
     const sendend = await sendEmail(formData)
     if (sendend) {
       toast.success(language === languages.es
@@ -40,10 +37,7 @@ const Contact: React.FC = () => {
       sender: '',
       target: 't.diaz.soto@gmail.com'
     })
-    setIsLoading(prev => {
-      console.log(prev)
-      return false
-    })
+    setIsLoading(_prev => false)
   }
 
   return (
