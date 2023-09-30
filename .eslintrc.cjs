@@ -26,6 +26,8 @@ module.exports = {
     '@typescript-eslint/consistent-type-definitions': 'off',
     'react/prop-types': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off'
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-misused-promises': 'off',
+    '@typescript-eslint/no-floating-promises': 'off'
   }
 }

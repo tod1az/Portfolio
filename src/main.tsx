@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
+import { Toaster } from 'react-hot-toast'
 import Header from './components/Header.tsx'
 import ActiveSectionContextProvider from './Context/ActiveSection.tsx'
 import ThemeButton from './components/Theme.tsx'
@@ -19,5 +20,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </ActiveSectionContextProvider>
       </ThemeProvider>
     </LanguageProvider>
+    <Toaster position='top-right' />
   </React.StrictMode>
 )
