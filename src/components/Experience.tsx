@@ -29,7 +29,7 @@ const Experience: React.FC = () => {
                 contentStyle={{
                   boxShadow: theme === themes.Dark ? 'none' : '',
                   background: theme === themes.Light
-                    ? 'rgba(243,244,246)'
+                    ? 'white'
                     : 'rgba(255,255,255,0.05)',
                   border: '1px solid rgba(0,0,0,0/05)',
                   textAlign: 'left',
