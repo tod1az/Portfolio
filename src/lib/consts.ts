@@ -137,7 +137,7 @@ export const experiencesData = [
     descriptionEs: `Creación desde cero de una página para la venta de caballos ecuestres,
      utilicé NextJs 14, para el diseño utilicé Shadcn, con una base de datos PostgreSql alojada en Supabase.
      `,
-    icon: React.createElement(GiHorseHead),
+    icon: React.createElement(CgWorkAlt),
     date: "2023 - 2024",
   },
 ] as const;
