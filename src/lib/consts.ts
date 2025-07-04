@@ -92,7 +92,7 @@ export const projectsData = [
       "Catálogo para la compra y venta de caballos ecuestres, cuenta con una landing page, una página con el catálogo de caballos y finalmente una página con el detalle de cada caballo.",
     tags: ["React", "Next.js", "Tailwind", "Prisma", "SupaBase", "Shadcn"],
     imageUrl: gzecuestre,
-    repoUrl: "https://www.gzecuestre.com/",
+    repoUrl: "https://github.com/tod1az/gzecuestre",
   },
 ] as const;
 
