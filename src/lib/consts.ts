@@ -3,7 +3,6 @@ import artify from "../assets/artify.png";
 import gzecuestre from "../assets/gzecuestre.jpg";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
-import { GiHorseHead } from "react-icons/gi";
 import React from "react";
 
 export const languages = {
@@ -124,7 +123,7 @@ export const experiencesData = [
     titleEs: "Graduado de Bootcamp",
     location: "Henry Bootcamp",
     description: "I graduated after 4 months of studying",
-    descriptionEs: "Me gradué después de 4 meses de estudio",
+    descriptionEs: "Graduado de Bootcamp como Full Stack Developer especializado en JavaScript.",
     icon: React.createElement(LuGraduationCap),
     date: "2023",
   },
@@ -139,6 +138,15 @@ export const experiencesData = [
      `,
     icon: React.createElement(CgWorkAlt),
     date: "2023 - 2024",
+  },
+  {
+    title: "",
+    titleEs: "Técnico en programación y análisis de sistemas",
+    location: "Aiep",
+    description: ``,
+    descriptionEs: `Egreso de la carrera Técnico en programación y análisis de sistemas, actualmente en busca de una práctica profesional.`,
+    icon: React.createElement(LuGraduationCap),
+    date: "2025",
   },
 ] as const;
 

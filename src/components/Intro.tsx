@@ -78,10 +78,8 @@ const Intro: React.FC = () => {
         </a>
 
         <a className='group bg-white  flex items-center gap-2 px-7 py-3 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition hover:cursor-pointer borderBlack dark:bg-white/10'
-          href={language === languages.en
-            ? '/CV-I.pdf'
-            : '/CV.pdf'
-          }
+          href={"https://t6lun8rso7.ufs.sh/f/c9j148Rt2n3CICJ3bjaOz1ZwyYcL452CpQEJkRUxImXsaP9l"}
+          target='_blank'
           download={true}
         >
           {

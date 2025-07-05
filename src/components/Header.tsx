@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import clsx from 'clsx'
 import { useActiveSectionContext, useLanguage } from '../lib/hooks'
 import { type SectionName } from '../lib/types'
-import LanguageSelect from './LanguageSelect'
 
 const Header: React.FC = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
@@ -19,7 +18,7 @@ const Header: React.FC = () => {
         rounded-none border border-white border-opacity-40 bg-white bg-opacity-80
           shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]
           md:top-6 md:h-[3.25rem] md:w-[36rem] md:rounded-full
-          dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75 transition-all`, { 'md:w-[39rem]': language === languages.es })}
+          dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75 transition-all`, { 'md:w-[33rem]': language === languages.es })}
         initial={{ y: -100, x: '-50%', opacity: 0 }}
         animate={{ y: 0, x: '-50%', opacity: 1 }}
       ></motion.div>
@@ -40,7 +39,6 @@ const Header: React.FC = () => {
                     clsx('flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 whitespace-nowrap',
                       { 'text-gray dark:text-white': activeSection === link.name })}
                 >
-
                   {language === languages.en ? link.en_name : link.name}
                   {activeSection === link.name && (
                     <motion.span
@@ -57,7 +55,6 @@ const Header: React.FC = () => {
               </motion.li>
             ))
           }
-          <LanguageSelect />
         </ul>
       </nav>
     </header>
