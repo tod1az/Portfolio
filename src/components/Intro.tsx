@@ -1,4 +1,4 @@
-import foto from '../assets/foto.png'
+import foto from '../assets/foto.jpg'
 import { motion } from 'framer-motion'
 import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
