@@ -1,5 +1,5 @@
-import food from "../assets/food.png";
 import artify from "../assets/artify.png";
+import venganza from "../assets/venganza.png";
 import gzecuestre from "../assets/gzecuestre.jpg";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
@@ -60,18 +60,20 @@ export const skillsData = [
   "Framer Motion",
   "SupaBase",
   "Shadcn",
+  "Python",
+  "Flask"
 ] as const;
 
 export const projectsData = [
   {
-    title: "Henry Food ",
+    title: "Venganza de Samael",
     description:
       "Single Page Application (SPA) that showcases various recipes from the Sponacular API and allows users to add their own recipes.",
     descriptionEs:
-      "Single Page Application que muestra recetas pertenecientes a la Api Sponacular y permite también al usuario agregar sus propias recetas ",
-    tags: ["React", "Redux", "Express", "Sequelize", "NodeJs"],
-    imageUrl: food,
-    repoUrl: "https://github.com/tod1az/PI-Food-main",
+      "Aplicación para la gestión de pedidos de una tienda de artículos de serigrafía.",
+    tags: ["React", "Python", "Flask", "JWT", "ShadcnUI", "Zustand"],
+    imageUrl: venganza,
+    repoUrl: "https://venganza-de-samael.vercel.app/",
   },
   {
     title: "Artify ",
@@ -144,7 +146,7 @@ export const experiencesData = [
     titleEs: "Técnico en programación y análisis de sistemas",
     location: "Aiep",
     description: ``,
-    descriptionEs: `Egreso de la carrera Técnico en programación y análisis de sistemas, actualmente en busca de una práctica profesional.`,
+    descriptionEs: `Egreso de la carrera Técnico en programación y análisis de sistemas.`,
     icon: React.createElement(LuGraduationCap),
     date: "2025",
   },
